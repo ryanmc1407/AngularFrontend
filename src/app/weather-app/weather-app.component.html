@@ -1,0 +1,47 @@
+<div class="city-container">
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Enter the city name</label>
+            <input type="text" placeholder="London" #location name="location" class="form-control">
+        </div>
+        <button (click)="fetchWeather(location.value)" class="btn btn-primary" type="button">Check Weather</button>
+    </form>
+</div>
+<!-- <div class="weather-wrapper">
+    <div class="weather-card madrid">
+        <div class="weather-icon sun"></div>
+        <h1 class="temperature">{{currentTemp}}º</h1>
+        <p>{{city}}</p>
+    </div>
+</div> -->
+<!-- <div>{{localTime}}</div> -->
+
+
+
+<div class="container py-4">
+    <div class="row mt-4">
+        <div class="text-center col-md-8 offset-md-2 py-4 shadow-lg">
+            <div class="lc-block">
+                <div editable="rich">
+                    <h2><strong>{{city}}, {{country}}</strong></h2>
+                    
+                </div>
+            </div>
+            <div class="lc-block">
+                <div editable="rich">
+                    <h2 class="display-3">{{currentTemp}}ºC</h2>
+                </div>
+            </div>
+            <div class="lc-block px-4 mb-4">
+                <div editable="rich">
+                    <p><em>{{ localTime }}</em></p>
+                    <p><em>{{ timeZone }}</em></p>
+                    <p>Feels Like: {{ feels_like }}ºC</p>
+                    <p>Weather Condition: {{ condition }}</p>
+                    <p>Humidity: {{ humidity }}%</p> <!-- Display humidity using the humidity property -->
+                    <p>Wind Speed: {{ windSpeed }} km/h</p> <!-- Display wind speed using the windSpeed property -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
